@@ -1,0 +1,113 @@
+.footer-listing {
+	background-color: #3e0142;
+	padding: 24px 0 0px;
+	@media screen and (min-width: 768px) {
+		padding: 50px 0 40px;
+	}
+	@media screen and (min-width: 1200px) {
+		padding: 75px 0 55px;
+	}
+	.footer-lst-nav {
+		@media screen and (min-width: 768px) {
+			@include flex;
+			@include align-center;
+			@include justify-between;
+		}
+		li {
+			@media screen and (max-width: 767px) {
+				width:50%;
+				float: left;
+				margin-bottom: 25px;
+			}
+			p {
+				font-family: 'BrandonGrotesque-Medium', serif;
+				font-size: 14px;
+				color: #943c97;
+				@media screen and (min-width: 768px) {
+					font-size: 12px;
+				}
+				@media screen and (min-width: 1200px) {
+					font-size: 18px;
+				}
+			}
+			ul > li {
+				padding-bottom: 3px;
+				position: relative;
+				@media screen and (max-width: 767px) {
+					width:100%;
+					margin-bottom: 0;
+				}
+				@media screen and (min-width: 768px) {
+					padding-bottom: 8px;
+				}
+				a {
+					font-size: 11px;
+					font-weight: 400;
+					color: rgba(255,255,255,0.6);
+					position: relative;
+    			transition: all 0.3s ease 0s;
+					@media screen and (min-width: 768px) {
+						font-size: 12px;
+					}
+					@media screen and (min-width: 1200px) {
+						font-size: 14px;
+					}
+					&:hover {
+						color: rgba(255,255,255,1);
+					}
+				}
+			}
+		}
+	}
+	.media {
+		.media-left {
+			padding-top: 5px;
+		}
+		.media-body {
+			p {
+				font-weight: 400;
+				color: #943c97;
+				@media screen and (min-width: 768px) {
+					font-size: 12px;
+				}
+				@media screen and (min-width: 1200px) {
+					font-size: 16px;
+				}
+				a {
+					color: #fff;
+					&:hover {
+						color: #f9defa;
+					}
+				}
+			}
+		}
+	}
+}
+
+.footer-most-btm {
+	background-color: #2a012d;
+	border-bottom: 3px solid #3e0142;
+	@media screen and (max-width: 767px) {
+		border-bottom: 0;
+		line-height: 30px;
+	}
+	@media screen and (min-width: 768px) {
+		line-height: 40px;
+	}
+	@media screen and (min-width: 1200px) {
+		line-height: 60px;
+	}
+	.footer-list-item {
+		font-size: 8px;
+		color: #943c97;
+		font-weight: 400;
+		@include flex;
+		margin:0;
+		@media screen and (min-width: 768px) {
+			font-size: 11px;
+		}
+		@media screen and (min-width: 1200px) {
+			font-size: 16px;
+		}
+	}
+}

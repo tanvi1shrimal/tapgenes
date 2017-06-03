@@ -1,0 +1,56 @@
+.client-logo-section {
+	background-color: #fff5ff;
+	padding: 15px 0;
+	@media screen and (min-width: 768px) {
+		padding: 20px 0;
+	}
+	@media screen and (min-width: 1200px) {
+		padding: 30px 0;
+	}
+	.client-logo-lists {
+		margin-bottom: 0;
+		@include flex;
+		@include align-center;
+		@include justify-between;
+		@media screen and (max-width: 767px) {
+			@include justify-center;
+			@include flex-wrap;
+		}
+		li {
+			@media screen and (max-width:767px) {
+				margin: 12px 20px;
+			}
+
+			&:first-child {
+				@media screen and (max-width:767px) {
+					width:100%;
+					text-align:center;
+					margin:0;
+				}
+			}
+			
+			h6 {
+				font-family: 'BrandonGrotesque-Bold', serif;
+				font-size: 12px;
+				color: $gray-dark;
+				@media screen and (max-width:767px) {
+					margin-top: 5px;
+				}
+				@media screen and (min-width: 768px) {
+					font-size: 15px;
+				}
+				@media screen and (min-width: 1200px) {
+					font-size: 22px;
+				}
+			}
+			img {
+				@media screen and (max-width:767px) {
+					height: 20px;
+				}
+				@media screen and (max-width:992px) {
+					height: 28px;
+				}
+			}
+		}
+	}
+}

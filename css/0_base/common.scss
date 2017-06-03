@@ -1,0 +1,146 @@
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+h1 {
+  font-family: 'BrandonGrotesque-Bold', serif;
+  font-size: 16px;
+  color:#fff; 
+  line-height: normal;
+  margin-bottom: 0;
+
+  @media screen and (min-width: 769px) {
+    font-size: 35px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 50px;
+  }
+}
+ul,ol,li{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin flex {
+  display: flex;
+}
+
+@mixin flex-wrap {
+  flex-wrap: wrap;
+}
+
+@mixin align-center {
+  align-items: center;
+}
+
+@mixin justify-center {
+  justify-content: center;
+}
+
+@mixin justify-between {
+  justify-content: space-between;
+}
+
+@mixin direction-column {
+  flex-direction: column;
+}
+
+@mixin line-shape-curve {
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    bottom: -17px;
+    left:50%;
+    right: 50%;
+    height: 60px;
+    text-align: center; 
+    border-left: 1px solid #ccc;
+    z-index: 1;
+    &:after {
+      content: '';
+      background-color: $shape-default-color;
+      @include size(3px,3px);
+      @include border-radius(5px);
+      display: block;
+      position: absolute;
+      margin-left: -2px;
+      bottom: 0;
+    }
+    &:before {
+      content: '';
+      background-color: $shape-default-color;
+      @include size(3px,3px);
+      @include border-radius(5px);
+      display: block;
+      position: absolute;
+      margin-left: -2px;
+      top: 0;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    height: 86px;
+    bottom: -30px;
+    &:after {
+      @include size(5px,5px);
+      margin-left: -3px;
+    }
+    &:before {
+      @include size(5px,5px);
+      margin-left: -3px;
+    }
+  }
+}
+@mixin line-shape-straight {
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    bottom: -30px;
+    left:50%;
+    right: 50%;
+    height: 60px;
+    text-align: center; 
+    border-left: 1px solid #ccc;
+    z-index: 1;
+    &:after {
+      content: '';
+      background-color: $shape-default-color;
+      @include size(3px,3px);
+      @include border-radius(5px);
+      display: block;
+      position: absolute;
+      margin-left: -2px;
+      bottom: 0;
+    }
+    &:before {
+      content: '';
+      background-color: $shape-default-color;
+      @include size(3px,3px);
+      @include border-radius(5px);
+      display: block;
+      position: absolute;
+      margin-left: -2px;
+      top: 0;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    height: 86px;
+    bottom: -43px;
+    &:after {
+      @include size(5px,5px);
+      margin-left: -3px;
+    }
+    &:before {
+      @include size(5px,5px);
+      margin-left: -3px;
+    }
+  }
+}
+.align-content {
+  @media screen and (min-width: 768px){
+    @include flex;
+    @include align-center;
+    @include justify-center;
+  }
+}
+.overflow-h {
+  overflow: hidden;
+}
+
